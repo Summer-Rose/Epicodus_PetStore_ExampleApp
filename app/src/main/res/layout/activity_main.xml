@@ -37,10 +37,19 @@
         android:layout_height="wrap_content"
         android:text="Check out our pets"
         android:id="@+id/viewPetsButton"
+        android:background="#3b55a2"
+        android:textColor="#dddddd"
+        android:layout_above="@+id/adoptButton"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adopt a pet"
+        android:id="@+id/adoptButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="#3b55a2"
         android:textColor="#dddddd"
-        android:typeface="normal" />
+        android:layout_marginTop="10dp"/>
 
 </RelativeLayout>
