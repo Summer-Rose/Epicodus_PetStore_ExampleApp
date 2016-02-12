@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     public static final String TAG = MainActivity.class.getSimpleName();
     private Button mViewPetsButton;
     private Button mAdoptButton;
@@ -20,21 +20,39 @@ public class MainActivity extends AppCompatActivity {
         mViewPetsButton = (Button) findViewById(R.id.viewPetsButton);
         mAdoptButton = (Button) findViewById(R.id.adoptButton);
 
-        mViewPetsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "mViewPetsButton has been clicked");
-                Intent intent = new Intent(MainActivity.this, PetsActivity.class);
-                startActivity(intent);
-            }
-        });
+        mViewPetsButton.setOnClickListener(this);
+        mAdoptButton.setOnClickListener(this);
+    }
 
-        mAdoptButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AdoptActivity.class);
-                startActivity(intent);
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        if (v == mViewPetsButton) {
+            Intent intent = new Intent(MainActivity.this, PetsActivity.class);
+            startActivity(intent);
+        }
+
+        if (v == mAdoptButton) {
+            Intent intent = new Intent(MainActivity.this, AdoptActivity.class);
+            startActivity(intent);
+        }
     }
 }
+
+//    @Override
+//    public void onClick(View v) {
+//        if (v == mViewPetsButton) {
+//            Log.d(TAG, "mViewPetsButton has been clicked");
+//            Intent intent = new Intent(MainActivity.this, PetsActivity.class);
+//            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) //if already exsists will use that one instead
+//            //intent.addFlags(Intent.)
+//            //NavUtils.navigateUpFromSameTask(this);
+//
+//            startActivity(intent);
+//        }
+//
+//
+//        if (v == mAdoptButton) {
+//            Intent intent = new Intent(MainActivity.this, AdoptActivity.class);
+//            startActivity(intent);
+//        }
+//    }

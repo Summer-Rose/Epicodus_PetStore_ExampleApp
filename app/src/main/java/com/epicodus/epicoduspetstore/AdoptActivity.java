@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.HashMap;
+
 public class AdoptActivity extends AppCompatActivity {
     public static final String TAG = AdoptActivity.class.getSimpleName();
     private EditText mNameEditText;
@@ -37,15 +39,31 @@ public class AdoptActivity extends AppCompatActivity {
                 String phone = mPhoneEditText.getText().toString();
                 String petName = mPetNameEditText.getText().toString();
                 String question = mQuestionsEditText.getText().toString();
+                sendDataToFirebase(name, email, phone, petName, question);
+
+
+
+
                 Log.d(TAG, name + " " + email + " " + phone + " " + petName + " " + question);
                 Intent intent = new Intent(AdoptActivity.this, ConfirmationActivity.class);
                 intent.putExtra("name", name);
                 intent.putExtra("email", email);
-                intent.putExtra("phone", email);
+                intent.putExtra("phone", phone);
                 intent.putExtra("petName", petName);
                 intent.putExtra("question", question);
                 startActivity(intent);
             }
         });
+    }
+
+    private void sendDataToFirebase(String name, String email, String phone, String petName, String question) {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("name", name);
+        map.put("email", email);
+        map.put("phone", phone);
+        map.put("petName", petName);
+        map.put("question", question);
+        //should be passing object
+        EpicodusPetStoreApplication.getAppInstance().getFirebaseRef().child("adoptionRequests/" + name).updateChildren(map);
     }
 }

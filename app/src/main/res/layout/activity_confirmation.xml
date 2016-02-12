@@ -10,4 +10,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.epicodus.epicoduspetstore.ConfirmationActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/petNameTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:text="Thank you for your interest in petName!" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/petNameTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/nameTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:id="@+id/emailTextView"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:id="@+id/phoneTextView"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="question"
+            android:id="@+id/questionTextView"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your request has been received. "
+        android:id="@+id/textView13"
+        android:layout_alignBottom="@+id/petNameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:textColor="#ff3b55a2"
+        android:textStyle="bold" />
+
 </RelativeLayout>
