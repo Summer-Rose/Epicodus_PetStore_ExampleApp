@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/ActionBarTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,14 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".PetsActivity">
+        <activity android:name=".ui.PetsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicodus.epicoduspetstore.MainActivity"/>
+                android:value=".ui.MainActivity"/>
         </activity>
-        <activity android:name=".AdoptActivity">
+        <activity android:name=".ui.AdoptActivity">
         </activity>
-        <activity android:name=".ConfirmationActivity">
+        <activity android:name=".ui.ConfirmationActivity">
         </activity>
     </application>
 

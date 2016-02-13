@@ -1,10 +1,11 @@
-package com.epicodus.epicoduspetstore;
+package com.epicodus.epicoduspetstore.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.epicodus.epicoduspetstore.R;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
