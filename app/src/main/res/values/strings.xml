@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Epicodus Pet Store</string>
+    <string name="api_key">3a62ece31719a64dcf6726980917d7ad</string>
+
+    <string name="consumer_key">9LpTsVftxsVYmrSj_PXd1Q</string>
+    <string name="consumer_secret">qsJq23E8meT0p7zvTYcs5fCVdeg</string>
+    <string name="token">QcSTbPKN-Dq1FMotWAMl7azL3r8lgr8K</string>
+    <string name="token_secret">EG9lVwKQUBfvIwnLf0OnOLCQ7_0</string>
 </resources>
